@@ -1,0 +1,5 @@
+## list pip requirements here
+unsloth
+diffusers
+laio
+re

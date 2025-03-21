@@ -1,0 +1,46 @@
+name: Unsloth GRPO AMP
+description: | 
+Once all the tasks have completed, you can start a session to run the starter notebooks to get started with using Cloudera AI workbench for a demonstration of building Your own medical reasoning model Using Reinforcement Learning with GRPO.
+author: Kaushik Pamulaparthy
+specification_version: 1.0
+prototype_version: 1.0
+date: "2025-02-28"
+
+environment_variables:
+  JUPYTER_WORKSPACE_LOCATION:
+    default: code/notebooks
+    description: "Location where Jupyter notebook will be stored"
+
+
+runtimes:
+  - editor: JupyterLab ## Other acceptable values are determined by the runtimes available in your CML environment
+    kernel: Python 3.10 
+    edition: Standard 
+
+## Below are some sample tasks based on some of the most popular aspects of AMP creation.
+tasks:
+
+  ## SESSION related AMP snippet
+  - type: run_session
+    name: Install Dependencies
+    script: 0_session-install-dependencies/install_dependencies.py
+    short_summary: Install Requirements and Dependencies
+    kernel: python3
+    cpu: 4
+    memory: 16
+
+  ## JOB related AMP snippet
+  - type: create_job
+    name: Setup
+    entity_label: setup
+    script: 1_job-setup-python-job/job.py
+    arguments: None
+    cpu: 4
+    memory: 16
+    short_summary: Create job to setup project runtimes.
+    environment:
+      TASK_TYPE: CREATE/RUN_JOB
+
+  - type: run_job
+    entity_label: setup
+    short_summary: Running job to setup project runtimes
