@@ -1,6 +1,6 @@
 name: Unsloth GRPO AMP
 description: | 
-Once all the tasks have completed, you can start a session to run the starter notebooks to get started with using Cloudera AI workbench for a demonstration of building Your own medical reasoning model Using Reinforcement Learning with GRPO.
+  Once all the tasks have completed, you can start a session to run the starter notebooks to get started with using Cloudera AI workbench for a demonstration of building Your own medical reasoning model Using Reinforcement Learning with GRPOgit  
 author: Kaushik Pamulaparthy
 specification_version: 1.0
 prototype_version: 1.0
