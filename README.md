@@ -11,8 +11,9 @@ This Notebook demonstrates **how to fine-tune a model using GRPO** for reasoning
 ## What Happens After the Project is Created?
 Once the user creates the project by deploying the AMP:
 - They will navigate into the project workspace in CML, and launch a session.
+- A runtime configuration of 4vCPU, 16GB RAM & 1 GPU is recommended.
 - Inside, they will find a **pre-configured Notebook** with the GRPO RL setup.
-- Now you can interactively explore or modify the workflow.
+- Now the user can interactively explore or modify the workflow.
 - **Base model and dataset** are pre-specified, but fully customizable.
 
 ---
@@ -34,7 +35,7 @@ Once the user creates the project by deploying the AMP:
 ---
 
 ## Instructions
-1. Open the `sample_notebook.ipynb` file inside the project.
+1. Open the `starter_notebook.ipynb` file inside the project.
 2. Run the **Setup** cells to install and load dependencies.
 3. Review and run the **Reward Function** section to understand model alignment.
 4. **(Optional)** Run the **Fine-tuning** cell if you want to perform full GRPO training.
