@@ -1,5 +1,14 @@
 ## list pip requirements here
-unsloth
+unsloth==2025.2.4
+vllm
+transformers==4.31.0
+rouge_score
+bert_score
+datasets
+evaluate
+scikit-learn
+sentence_transformers
+sacremoses
 diffusers
 laio
-re
+pillow
