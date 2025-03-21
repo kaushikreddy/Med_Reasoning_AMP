@@ -1,44 +1,20 @@
-name: Community
+name: Med_Reasoning_GRPO_RL_Quickstart
 
 entries:
-  - title: AMP Name Here
-    label: Github-repo-name-here
+  - title: Med_Reasoning_GRPO_RL_Quickstart
+    label: GRPO
     short_description: |
-        Short description of what the AMP does.
+        A starter notebook that demonstrates how to use GRPO on Cloudera AI.
     long_description: |
-        Long description of what the AMP does.
-    long_description_html: |
-        Long description of what the AMP does.
-    image_path: >-
-      https://raw.githubusercontent.com/githubusername/githubrepo/main/path/to/amp/cover.png
+        A starter notebook that demonstrates how to build your own medical reasoning model by using Unsloth and other fine tuning libraries to fine tune an LLM for reasoning using the GRPO RL algorithm in Cloudera AI workbench.
     tags:
-      - Sample
-      - Tags
-      - Used
-      - As
-      - Identifiers
-    git_url: 'https://github.com/githubusername/githubrepo'
+      - LLM
+      - RL
+      - Reasoning
+      - CoT
+      - GRPO
+    git_url: 'https://github.com/kaushikreddy/Med_Reasoning_AMP.git'
     is_prototype: true
-    is_community: true
-    is_new: true
 
-  - title: A different AMP Name Here
-    label: Github-repo-name-here
-    short_description: |
-        Short description of what the AMP does.
-    long_description: |
-        Long description of what the AMP does.
-    long_description_html: |
-        Long description of what the AMP does.
-    image_path: >-
-      https://raw.githubusercontent.com/githubusername/githubrepo/main/path/to/amp/cover.png
-    tags:
-      - Sample
-      - Tags
-      - Used
-      - As
-      - Identifiers
-    git_url: 'https://github.com/githubusername/githubrepo'
-    is_prototype: true
-    is_community: true
-    is_new: true
+
+ 
