@@ -33,7 +33,7 @@ tasks:
   - type: create_job
     name: Setup
     entity_label: setup
-    script: 1_job-setup-python-job/job.py
+    script: 1_job-run-python-job/job.py
     arguments: None
     cpu: 4
     memory: 16
