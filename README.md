@@ -49,12 +49,6 @@ Once the user creates the project by deploying the AMP:
 
 ---
 
-## Next Steps
-- Experiment by modifying reward functions to fit your specific use case.
-- Try swapping datasets and models to test generalization.
-
----
-
  **Tip:** This AMP is designed for flexibility—tinker safely without triggering expensive compute unless you explicitly choose to fine-tune!
 
 Guide to Fine-Tuning with GRPO
@@ -636,3 +630,9 @@ By fine-tuning with the custom knowledge base, you achieve:
 
 -   Overall Benefit:\
     This approach converts a general language model into an expert system that can efficiently provide accurate and detailed answers for organisations with complex knowledge bases.
+
+---
+
+## Next Steps
+- Experiment by modifying reward functions to fit your specific use case.
+- Try swapping datasets and models to test generalization.
