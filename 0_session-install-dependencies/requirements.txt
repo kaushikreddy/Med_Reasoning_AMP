@@ -12,3 +12,12 @@ sacremoses
 diffusers
 laio
 pillow
+
+# Specific GitHub Packages (optional, can be installed separately)
+# git+https://github.com/huggingface/trl.git@e95f9fb74a3c3647b86f251b7e230ec51c64b72b
+
+# Optional but recommended for ML projects
+numpy
+scipy
+pandas
+matplotlib
