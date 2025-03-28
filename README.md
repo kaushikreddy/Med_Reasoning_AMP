@@ -52,7 +52,7 @@ Getting Started
 
 ### Prerequisites
 
--   Python 3.8+
+-   Python 3.10+
 -   GPU with sufficient VRAM (minimum 5GB VRAM, for any model with 1.5B parameters or less)
 -   Recommended runtime: 4vCPU, 16GB RAM, 1 GPU 
 
