@@ -56,16 +56,6 @@ Getting Started
 -   GPU with sufficient VRAM (minimum 5GB VRAM, for any model with 1.5B parameters or less)
 -   Recommended runtime: 4vCPU, 16GB RAM, 1 GPU 
 
-### Installation
-
-1.  Clone the repository
-2.  Install dependencies:
-
-```
-pip install -r requirements.txt
-
-```
-
 ### Project Setup
 
 1.  Open `starter_notebook.ipynb`
