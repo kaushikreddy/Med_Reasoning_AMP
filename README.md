@@ -26,7 +26,7 @@ Key Features
 ### Flexible Model Selection
 
 -   Support for multiple base models:
-    -   Llama 3.1-8B-Instruct (used as a default model)
+    -   Llama 3.1-8B-Instruct (default)
     -   Qwen2.5
     -   Phi-4
     -   Gemma 3
@@ -41,9 +41,9 @@ Key Features
 ### Customizable Reward Functions
 
 -   Evaluate model outputs for:
-    -   Correctness (using semantic correctness)
-    -   Response formatting (using tag presence)
-    -   Clinical accuracy (using perplexity)
+    -   Correctness (semantic alignment with references)
+    -   Response formatting (e.g., tag presence)
+    -   Clinical accuracy (evaluated via perplexity)
 
 * * * * *
 
@@ -53,7 +53,7 @@ Getting Started
 ### Prerequisites
 
 -   Python 3.10+
--   GPU with sufficient VRAM (minimum 5GB VRAM, for any model with 1.5B parameters or less)
+-   GPU with minimum 5GB VRAM (for models ≤1.5B parameters)
 -   Recommended runtime: 4vCPU, 16GB RAM, 1 GPU 
 
 ### Project Setup
@@ -61,7 +61,7 @@ Getting Started
 1.  Open `starter_notebook.ipynb`
 2.  Run setup cells to install dependencies
 3.  Review reward function configurations
-4.  **(Optional)** Trigger full GRPO training (approximately 3 hours with preset configs)
+4.  **(Optional)** Trigger full GRPO training (≈ 3 hours with preset configs)
 
 * * * * *
 
@@ -70,8 +70,8 @@ Usage Guide
 
 ### Quick Start
 
-1.  Use pre-trained checkpoint for immediate demos
-2.  Customize base model and dataset paths as necessary
+1.  Use provided pre-trained checkpoint for demo
+2.  Customize base model and dataset paths easily – just change the model or dataset in the notebook
 3.  Adjust reward functions as needed
 
 ### Fine-Tuning Workflow
@@ -87,7 +87,7 @@ Usage Guide
 from datasets import load_dataset
 
 # Load medical reasoning dataset
-medical_data = load_dataset('your/medical/dataset')
+dataset = load_dataset('your/medical/dataset')
 
 # Prepare system prompt
 SYSTEM_PROMPT = """
@@ -102,14 +102,50 @@ Respond in the following format:
 
 ```
 
+Advanced Customization
+----------------------
+
+### Swap in Different Base Models
+
+To switch models, update this line in the notebook:
+
+```
+model_name = "meta-llama/Meta-Llama-3.1-8B-Instruct" 
+# Swap with another supported base model 
+# model_name = "Qwen/Qwen2.5-7B" 
+# model_name = "microsoft/Phi-4" 
+# model_name = "google/gemma-3-1b-it"
+```
+
+All training and evaluation logic works across supported architectures with minimal changes.
+
+### Swap in New Datasets Easily
+
+Just replace the dataset loading line:
+
+```
+dataset = load_dataset('your/medical/dataset')
+# Swap with another dataset:
+# dataset = load_dataset('your/general-domain-dataset')
+```
+
+Make sure the new dataset provides prompt--response pairs or can be adapted using preprocessing (examples provided in the notebook).
+
+### Custom Reward Functions
+
+Plug in new reward functions as needed:
+
+-   The notebook includes modular functions for correctness, formatting, and quality
+-   Easily extendable to include hallucination detection, factuality checks, or custom verifiers
+
 * * * * *
 
 Fine-Tuning Considerations
 --------------------------
 
--   Compute-intensive process (approximately 3 hours for fine tune run with preset configs)
+-   Compute-intensive process (≈ 3 hours with default config)
 -   Pre-trained checkpoints available for quick testing
--   Fully customizable workflow
+-   Workflow is modular and fully customizable
 
 * * * * *
 
@@ -118,16 +154,7 @@ Reward Function Examples
 
 -   **Correctness Reward**: Compare model output to reference answer
 -   **Format Reward**: Ensure XML-like response structure
--   **Quality Reward**: Validate text quality with perplexity for clinical accuracy
-
-* * * * *
-
-Advanced Customization
-----------------------
-
--   Modify base models
--   Create custom reward functions
--   Adapt to specific medical domains with training dataset preparation
+-   **Quality Reward**: Validate output fluency via perplexity scoring
 
 * * * * *
 
@@ -136,7 +163,7 @@ Performance Optimization
 
 -   Uses LoRA for parameter-efficient fine-tuning
 -   Supports mixed-precision training (bfloat16/fp16)
--   Configurable batch sizes and gradient accumulation
+-   Configurable batch sizes, training schedule and gradient accumulation
 
 * * * * *
 
@@ -145,6 +172,7 @@ Recommended Next Steps
 
 -   Experiment with different reward function designs. The notebook contains examples with semantic correctness, perplexity and tag presence.
 -   Test model performance across various medical reasoning scenarios.
+-   Try custom base models and new datasets
 
 * * * * *
 
