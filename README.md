@@ -136,7 +136,7 @@ Make sure the new dataset provides prompt--response pairs or can be adapted usin
 Plug in new reward functions as needed:
 
 -   The notebook includes modular functions for correctness, formatting, and quality
--   Easily extendable to include hallucination detection, factuality checks, or custom verifiers
+-   Easily extendable to include factuality checks, custom verifiers and more
 
 * * * * *
 
