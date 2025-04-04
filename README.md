@@ -126,7 +126,7 @@ Just replace the dataset loading line:
 ```
 dataset = load_dataset('your/medical/dataset')
 # Swap with another dataset:
-# dataset = load_dataset('your/general-domain-dataset')
+# dataset = load_dataset('your/specific/dataset')
 ```
 
 Make sure the new dataset provides prompt--response pairs or can be adapted using preprocessing (examples provided in the notebook).
