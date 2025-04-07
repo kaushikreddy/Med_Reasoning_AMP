@@ -28,19 +28,3 @@ tasks:
     kernel: python3
     cpu: 4
     memory: 16
-
-  ## JOB related AMP snippet
-  - type: create_job
-    name: Setup
-    entity_label: setup
-    script: 1_job-run-python-job/job.py
-    arguments: None
-    cpu: 4
-    memory: 16
-    short_summary: Create job to setup project runtimes.
-    environment:
-      TASK_TYPE: CREATE/RUN_JOB
-
-  - type: run_job
-    entity_label: setup
-    short_summary: Running job to setup project runtimes

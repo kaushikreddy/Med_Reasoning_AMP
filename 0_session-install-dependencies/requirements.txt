@@ -1,6 +1,22 @@
-## list pip requirements here
-## Optional but recommended
-numpy
-scipy
-pandas
-matplotlib
+# Core dependencies
+torch
+torchvision
+torchaudio
+
+# Specific versions
+unsloth==2025.2.4
+vllm
+transformers==4.31.0
+pillow>=9.5.0
+
+# ML and evaluation packages
+rouge_score
+bert_score
+datasets
+evaluate
+scikit-learn
+sentence_transformers
+sacremoses
+diffusers
+
+# TRL from GitHub - specify in pip command: pip install -r requirements.txt && pip install git+https://github.com/huggingface/trl.git@e95f9fb74a3c3647b86f251b7e230ec51c64b72b
