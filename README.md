@@ -4,7 +4,7 @@ Reinforcement Learning Fine-Tuning with GRPO for Medical Reasoning
 Overview
 --------
 
-This project demonstrates **how to fine-tune a language model using GRPO (Group Relative Policy Optimization)** specifically for medical reasoning tasks. By leveraging custom reward functions and a specialized medical reasoning dataset, we transform a general-purpose language model into a domain-specific medical reasoning model.
+This project demonstrates **how to fine-tune a language model using GRPO (Group Relative Policy Optimization)** specifically for medical reasoning tasks. By leveraging custom reward functions and a specialized medical reasoning dataset, we transform a general-purpose language model into a domain-specific medical reasoning model. Note that the information provided here is intended solely for educational purposes and cannot substitute for professional medical advice.
 
 * * * * *
 
