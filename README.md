@@ -8,6 +8,16 @@ This project demonstrates **how to fine-tune a language model using GRPO (Group 
 
 * * * * *
 
+Launching the Project on CAI
+----------------------------
+
+This AMP was developed against Python 3.10. There are two ways to launch the project on CAI:
+
+1.  From Prototype Catalog - Navigate to the AMPs tab on a CML workspace, select the "Build Your Own Medical Reasoning Model" tile, click "Launch as Project", click "Configure Project"
+2.  As an AMP - In a CML workspace, click "New Project", add a Project Name, select "AMPs" as the Initial Setup option, copy in this repo URL, click "Create Project", click "Configure Project"
+
+* * * * *
+
 Project Workflow
 ----------------
 
